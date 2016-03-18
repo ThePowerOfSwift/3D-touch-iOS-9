@@ -1,6 +1,6 @@
 # 3D-touch-iOS-9
 
-A simple example wot to set the icons in 3D touch mode.
+A simple example with 3D touch in iOS 9.
 
 ## Demo
 
