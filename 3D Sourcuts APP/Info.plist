@@ -46,6 +46,19 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIApplicationShorcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShorcutItemIconType</key>
+			<string>UIApplicationShorcutItemIconTypeSearch</string>
+			<key>UIApplicationShorcutItemSubtitle</key>
+			<string>Get top results</string>
+			<key>UIApplicationShorcutItemIconTitle</key>
+			<string>Search</string>
+			<key>UIApplicationShorcutItemType</key>
+			<string>Search</string>
+		</dict>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

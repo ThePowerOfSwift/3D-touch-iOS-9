@@ -16,6 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //MARK: -UIApplicationShortcutItem
+        //Downloaded the latest hookup and dynamically load it. Maybe when app closes update the latest hookup so nextime you launch it has new data
+        let downloadedHookup = "Hello"
+        
+        if let shourtcutItems = application.shortcutItems where shourtcutItems.isEmpty {
+            let dynamicShourtcut = UIMutableApplicationShortcutItem(type: "Hookup", localizedTitle: "Hookup", localizedSubtitle: "Start a fling with \(downloadedHookup)", icon: UIApplicationShortcutIcon(templateImageName: "love"), userInfo: nil)
+            
+           application.shortcutItems = [dynamicShourtcut]
+            
+            
+            
+        }
+        
         return true
     }
 
@@ -40,6 +54,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
+    
+    
+    //MARK: -UIApplicationShortcutItem
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        
+        if let tabVC = self.window?.rootViewController as? UITabBarController {
+            
+            if shortcutItem.type == "Search" {
+                tabVC.selectedIndex = 0
+                
+            } else if shortcutItem.type == "Hookup" {
+                tabVC.selectedIndex = 1
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 }
